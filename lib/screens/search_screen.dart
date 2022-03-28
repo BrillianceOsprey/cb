@@ -61,86 +61,11 @@ class _SearchScreenState extends State<SearchScreen> {
                     TextButton(onPressed: () {}, child: const Text('View All'))
                   ],
                 ),
-                // job card
-                Expanded(
-                    child: Container(
-                        decoration: BoxDecoration(
-                            border: Border.all(color: Colors.black),
-                            borderRadius: BorderRadius.circular(5.0)),
-                        child: const listViewBuilder())),
-
-                // Expanded(
-                //   child: Column(
-                //     children: [
-                //       Row(
-                //         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                //         children: [
-                //           const Text(
-                //               'Let\'s join with our top employment '),
-                //           const Spacer(),
-                //           TextButton(
-                //               onPressed: () {},
-                //               child: const Text('View All'))
-                //         ],
-                //       ),
-                //       GridView.builder(
-                //           gridDelegate:
-                //               const SliverGridDelegateWithMaxCrossAxisExtent(
-                //                   maxCrossAxisExtent: 200,
-                //                   childAspectRatio: 3 / 2,
-                //                   crossAxisSpacing: 20,
-                //                   mainAxisSpacing: 20),
-                //           itemCount: 4,
-                //           itemBuilder: (BuildContext ctx, index) {
-                //             return CircularImage();
-                //           })
-                //     ],
-                //   ),
-                // )
               ],
             ),
           ],
         ),
       ),
     );
-  }
-}
-
-class CircularImage extends StatelessWidget {
-  const CircularImage({
-    Key? key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return
-        // CircleAvatar(
-        //   backgroundImage: AssetImage(
-        //     'images/yoma_land.jpg',
-        //   ),
-        // );
-        Container(
-      width: 90,
-      height: 90,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.all(Radius.circular(50.0)),
-        color: Colors.redAccent,
-      ),
-    );
-  }
-}
-
-class listViewBuilder extends StatelessWidget {
-  const listViewBuilder({
-    Key? key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return ListView.builder(
-        itemCount: 5,
-        itemBuilder: ((BuildContext context, index) {
-          return Container(child: const ReusableCardWidget());
-        }));
   }
 }

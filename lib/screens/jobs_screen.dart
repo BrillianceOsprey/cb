@@ -11,7 +11,7 @@ class _JobScreenState extends State<JobScreen> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Center(child: Text('Jobs Screen')),
+      child: const Center(child: Text('Jobs Screen')),
     );
   }
 }

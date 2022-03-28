@@ -1,18 +1,22 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:job_click/screens/compay_details.dart';
 import 'package:job_click/screens/search_screen.dart';
-import 'package:job_click/screens/companies_screen.dart';
+import 'package:job_click/screens/company_list.dart';
 import 'package:job_click/screens/my_account_screen.dart';
 import 'package:job_click/screens/splash_screen.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({Key? key}) : super(key: key);
 
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -20,10 +24,11 @@ class MyApp extends StatelessWidget {
       // initialRoute: SplashScreen.splashScreen,
       initialRoute: SplashScreen.splashScreen,
       routes: {
-        SplashScreen.splashScreen: (context) => SplashScreen(),
-        SearchScreen.id: (context) => SearchScreen(),
-        MyAccountScreen.id: (context) => MyAccountScreen(),
-        CompaniesScreen.id: (context) => CompaniesScreen(),
+        SplashScreen.splashScreen: (context) => const SplashScreen(),
+        SearchScreen.id: (context) => const SearchScreen(),
+        MyAccountScreen.id: (context) => const MyAccountScreen(),
+        CompnayLists.id: (context) => const CompnayLists(),
+        CompanyDetails.id: (context) => const CompanyDetails()
       },
     );
   }

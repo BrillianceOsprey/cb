@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:job_click/screens/companies_screen.dart';
+import 'package:job_click/screens/company_list.dart';
 import 'package:job_click/screens/compay_details.dart';
 import 'package:job_click/screens/search_screen.dart';
 
@@ -19,7 +19,7 @@ class _SplashScreenState extends State<SplashScreen> {
     super.initState();
     Future.delayed(const Duration(seconds: 1), () {
       Navigator.of(context).push(MaterialPageRoute(builder: (_) {
-        return const CompaniesScreen();
+        return const BottomBarScreen();
       }));
     });
   }

@@ -15,9 +15,6 @@ class _CompanyDetailsState extends State<CompanyDetails> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-          // appBar: AppBar(
-          //   title: Text('Click'),
-          // ),
           body: CustomScrollView(
         controller: scrollController,
         slivers: <Widget>[
@@ -151,9 +148,9 @@ class _CompanyDetailsState extends State<CompanyDetails> {
                       ),
                       Container(
                         constraints:
-                            const BoxConstraints(minHeight: 20, maxHeight: 400),
+                            const BoxConstraints(minHeight: 20, maxHeight: 690),
                         child: ListView.builder(
-                            itemCount: 10,
+                            itemCount: 50,
                             itemBuilder: ((BuildContext context, index) {
                               return const OpenJobsCard();
                             })),
@@ -200,9 +197,16 @@ class OpenJobsCard extends StatelessWidget {
                         decoration: BoxDecoration(
                             color: Colors.green,
                             borderRadius: BorderRadius.circular(5)),
-                        child: const Center(child: Text('Full Time'))),
+                        child: const Center(
+                            child: Text(
+                          'Full Time',
+                          style: TextStyle(
+                              fontSize: 11,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white),
+                        ))),
                     // const Spacer(),
-                    SizedBox(
+                    const SizedBox(
                       width: 10,
                     ),
                     const Text('MMK 20,000,00 - 30,000,00'),
